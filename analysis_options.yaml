@@ -15,6 +15,10 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+    - lib/domain/models/*.g.dart
+    - lib/domain/models/*.freezed.dart
+    - lib/l10n/generated/**
+    - lib/l10n/*.arb
 
 linter:
   rules:

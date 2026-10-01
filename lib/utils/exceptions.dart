@@ -1,11 +1,11 @@
-class AppException implements Exception {
-  AppException(this.message, {this.cause});
+class AppError implements Exception {
+  AppError(this.message, {this.cause});
 
-  factory AppException.fromError(Exception error) {
-    if (error is AppException) {
+  factory AppError.fromError(Exception error) {
+    if (error is AppError) {
       return error;
     } else {
-      return AppException('Unexpected error occurred', cause: error);
+      return AppError('Unexpected error occurred', cause: error);
     }
   }
 
@@ -13,5 +13,5 @@ class AppException implements Exception {
   final Object? cause;
 
   @override
-  String toString() => 'AppException: $message';
+  String toString() => 'AppError: $message';
 }
